@@ -2,7 +2,7 @@ var modules = [
     'Yvonne Mcfadden module,Programming,Yvette Strickland,01/07/2021',
     'Kaitlin O. Walls module,Software Testing,Britanney Norton,10/13/2020',
     'Lars Y. Wilkinson module,Teaching,Adara Saunders,04/06/2020',
-    'JaSoftware Engineering J. Colon module,Software Engineering,Isaiah Short,11/02/2021',
+    'Jasmin J. Colon module,Software Engineering,Isaiah Short,11/02/2021',
     'George Knapp module,Teaching,Hashim Santiago,12/14/2019',
     'Eagan Z. Gill module,Programming,Nayda Conley,05/24/2021',
     'Veronica Mills module,Programming,Kyla Combs,08/14/2020',
@@ -106,6 +106,11 @@ for (var i = 0; i < modules.length; i++) {
     var m = modules[i].split(',');
     for (var j = 0; j < m.length; j++){
         var cell = row.insertCell(j);
-        cell.innerHTML = m[j];
+        if (j == 0){
+            cell.innerHTML = "<a href='viewModule.html?title="+ m[j] + "'>" + m[j] +'</a>';
+        }else{
+            cell.innerHTML = m[j];
+        }
     }
+    
 }
