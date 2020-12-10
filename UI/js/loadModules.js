@@ -107,7 +107,7 @@ for (var i = 0; i < modules.length; i++) {
     for (var j = 0; j < m.length; j++){
         var cell = row.insertCell(j);
         if (j == 0){
-            cell.innerHTML = "<a href='viewModule.html?title="+ m[j] + "'>" + m[j] +'</a>';
+            cell.innerHTML = "<a href='viewModule.html?title="+ m[j] + "&author="+ m[2] + "&date="+ m[3] +"'>" + m[j] +'</a>';
         }else{
             cell.innerHTML = m[j];
         }

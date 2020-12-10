@@ -51,6 +51,45 @@
     <br> <br>
     <div class='container'>
       <h1 id="title">Module Name</h1>
+      <br>
+      <br>
+      <h3>General Information</h3>
+      <br>
+        <ul style="list-style-type:none;">
+          <li id="title2"></li>
+          <li id="date"></li>
+          <li><strong>Comments:</strong> Eget magna fermentum iaculis eu non diam phasellus vestibulum. Massa sed elementum tempus egestas sed sed. Volutpat est velit egestas dui. Semper quis lectus nulla at volutpat diam ut.</li>
+          <li><strong>Size:</strong> 6 files</li>
+          <li><strong>Abstract:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est sit amet facilisis magna etiam. Neque gravida in fermentum et sollicitudin. Et tortor consequat id porta nibh venenatis cras sed felis. Ac turpis egestas integer eget aliquet nibh praesent. Arcu bibendum at varius vel pharetra vel turpis nunc.</li>
+        </ul>
+      <hr>
+      <h3>Author</h3>
+      <p style="margin-left: 30px;" id="author"></p>
+      <hr>
+      <h3>Learning Objectives</h3>
+      <br>
+      <ol>
+        <li><strong>Application</strong> Sit amet porttitor eget dolor morbi non. Venenatis tellus in metus vulputate eu. In ante metus dictum at tempor commodo ullamcorper. Est lorem ipsum dolor sit amet consectetur. </li>
+      </ol>
+      <hr>
+      <h3>Topics</h3>
+      <br>
+      <ol>
+        <li>Enim ut tellus</li>
+        <li>Ipsum consequat</li>
+      </ol>
+      <hr>
+      <h3>Materials</h3>
+      <br>
+      <ol>
+        <li>document1.docx</li>
+        <li>document2.docx</li>
+        <li>document3.docx</li>
+        <li>document4.docx</li>
+        <li>screenshot1.png</li>
+        <li>screenshot2.png</li>
+      </ol>
+      <button style="margin-left: 30px;" class="btn btn-outline-dark">Download Zip</button>
     </div>
     <script>
       function parseTitle(){
@@ -58,7 +97,24 @@
         console.log(queryStr);
         var urlParm = new URLSearchParams(queryStr);
         document.getElementById("title").innerHTML = urlParm.get('title');
+        document.getElementById('author').innerHTML = urlParm.get('author');
+        document.getElementById('date').innerHTML = "<strong>Date submitted:</strong> " + urlParm.get('date');
+        document.getElementById('title2').innerHTML = "<strong>Title:</strong> " + urlParm.get('title');
       }
     </script>
   </body>
+  <br><br><br><br><br>
+  <!-- Footer -->
+<section id="footer" class="bg-dark">
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+              <p>SE410 Team Maroon</p>
+              <p class="h6">Tyr Zong, Laura-Amira Talaat-Hamid,Binh Tran, Shree Raj Tuladhar, David Zeng</p>
+          </div>
+          </hr>
+      </div>	
+  </div>
+</section>
+<!-- ./Footer -->
 </html>
